@@ -1,7 +1,7 @@
 # ifndef __strcmb__hpp
 # define __strcmb__hpp
 # include <boost/cstdint.hpp>
-# include <eint_h.hpp>
+# include <eint_hp.hpp>
 # include <string.h>
 # define STRCMB_FREE_NONE 0
 # define STRCMB_FREE_BOTH 1
