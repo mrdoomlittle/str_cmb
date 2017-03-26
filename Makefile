@@ -7,7 +7,7 @@ all:
 	cp strcmb.hpp inc
 
 clean:
-	rm *.o
-	rm lib/*.a
-	rm inc/*.hpp
+	rm -f *.o
+	rm -f lib/*.a
+	rm -f inc/*.hpp
 
