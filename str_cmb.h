@@ -11,7 +11,7 @@ char* mdl_str_cmb(char*, char*, mdl_u8_t);
 # ifdef __cplusplus
 }
 namespace mdl {
-char*(*str_cmb)(char*, char*, mdl_u8_t) = &mdl_str_cmb;
+static char*(*str_cmb)(char*, char*, mdl_u8_t) = &mdl_str_cmb;
 }
 # endif
 # endif /*__mdl__str__cmb__h*/
