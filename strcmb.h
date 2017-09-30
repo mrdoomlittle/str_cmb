@@ -7,11 +7,11 @@
 # ifdef __cplusplus
 extern "C" {
 # endif
-char* mdl_str_cmb(char*, char*, mdl_u8_t);
+char* mdl_strcmb(char*, char*, mdl_u8_t);
 # ifdef __cplusplus
 }
 namespace mdl {
-static char*(*str_cmb)(char*, char*, mdl_u8_t) = &mdl_str_cmb;
+static char*(*strcmb)(char*, char*, mdl_u8_t) = &mdl_strcmb;
 }
 # endif
 # endif /*__mdl__str__cmb__h*/
