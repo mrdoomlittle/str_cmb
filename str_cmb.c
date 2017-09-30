@@ -11,25 +11,26 @@
 # endif
 # include <string.h>
 char* mdl_str_cmb(char *__s1, char *__s2, mdl_u8_t __flag) {
-	mdl_uint_t s1_len = strlen(__s1), s2_len = strlen(__s2);
+	if (!__s1 && !__s2) return NULL;
+	mdl_uint_t s1_len = !__s1? 0:strlen(__s1), s2_len = !__s2? 0:strlen(__s2);
 	mdl_uint_t n_len = s1_len+s2_len+1;
 
 	char *str_ret = (char*)_malloc(n_len);
-	strncpy(str_ret, __s1, s1_len);
-	strncpy(str_ret+s1_len, __s2, s2_len);
+	if (__s1 != NULL) strncpy(str_ret, __s1, s1_len);
+	if (__s2 != NULL) strncpy(str_ret+s1_len, __s2, s2_len);
 	*(str_ret+n_len-1) = '\0';
 	switch(__flag) {
 		case MDL_SC_FREE_BOTH:
-			_free(__s1);
-			_free(__s2);
+			if (__s1 != NULL) _free(__s1);
+			if (__s2 != NULL) _free(__s2);
 		break;
 
 		case MDL_SC_FREE_LEFT:
-			_free(__s1);
+			if (__s1 != NULL) _free(__s1);
 		break;
 
 		case MDL_SC_FREE_RIGHT:
-			_free(__s2);
+			if (__s2 != NULL) _free(__s2);
 		break;
 	}
 
