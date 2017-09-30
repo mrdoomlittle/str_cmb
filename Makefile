@@ -10,5 +10,5 @@ clean:
 	rm -f main
 	rm -f *.o
 	rm -f lib/*.a
-	rm -f inc/*.h
+	rm -f inc/mdl/*.h
 
