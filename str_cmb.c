@@ -1,4 +1,4 @@
-# include "strcmb.h"
+# include "str_cmb.h"
 # ifdef __FFLY_ENGINE
 #	include <firefly/memory/mem_alloc.h>
 #	include <firefly/memory/mem_free.h>
@@ -10,7 +10,7 @@
 #	define _free(_X) free(_X)
 # endif
 # include <string.h>
-char* mdl_strcmb(char *__s1, char *__s2, mdl_u8_t __flag) {
+char* mdl_str_cmb(char *__s1, char *__s2, mdl_u8_t __flag) {
 	if (!__s1 && !__s2) return NULL;
 	mdl_uint_t s1_len = !__s1? 0:strlen(__s1), s2_len = !__s2? 0:strlen(__s2);
 	mdl_uint_t n_len = s1_len+s2_len+1;
