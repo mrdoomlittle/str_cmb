@@ -1,9 +1,9 @@
 # ifndef __mdl__str__cmb__h
 # define __mdl__str__cmb__h
 # include <mdlint.h>
-# define MDL_SC_FREE_BOTH 1
-# define MDL_SC_FREE_LEFT 2
-# define MDL_SC_FREE_RIGHT 3
+# define _mdl_stc_free_both 0x1
+# define _mdl_stc_free_lhs 0x2
+# define _mdl_stc_free_rhs 0x3
 # ifdef __cplusplus
 extern "C" {
 # endif
